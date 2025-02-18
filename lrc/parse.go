@@ -45,6 +45,9 @@ func ParseReader(reader io.Reader) ([]Duration, []Text, error) {
 	match: // [00:00.00][00:00.00]text -> [00:00.00]text -> text
 		for {
 			switch {
+			case len(ll) > 0 && ll[0] == ' ':
+				ll = ll[1:]
+				break match
 			case len(ll) >= 10 &&
 				ll[0] == '[' &&
 				'0' <= ll[1] && ll[1] <= '9' && '0' <= ll[2] && ll[2] <= '9' &&
