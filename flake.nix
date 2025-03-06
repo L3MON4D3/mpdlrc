@@ -47,7 +47,7 @@
         in
         {
           default = pkgs.mkShell {
-            buildInputs = with pkgs; [ go gopls gotools go-tools gomod2nix.outputs.packages.${system}.default ];
+            buildInputs = with pkgs; [ go gopls gotools go-tools ];
           };
         });
 
