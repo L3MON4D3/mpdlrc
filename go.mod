@@ -1,7 +1,8 @@
 module github.com/env25/mpdlrc
 
-go 1.21
-toolchain go1.22.5
+go 1.21.0
+
+toolchain go1.23.5
 
 require (
 	github.com/docopt/docopt-go v0.0.0-20180111231733-ee0de3bc6815
